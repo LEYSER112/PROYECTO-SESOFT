@@ -1,13 +1,13 @@
 <?php
 
-$DB_HOST=$_ENV["DB_HOST"];
-$DB_USER=$_ENV["DB_USER"];
-$DB_PASSWORD=$_ENV["DB_PASSWORD"];
-$DB_NAME=$_ENV["DB_NAME"];
-$DB_PORT=$_ENV["DB_PORT"];
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "proyectodb";
  
             // Conecta a la base de datos
-   $conn = new mysqli("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME","$DB_PORT");
+   $conn = new mysqli($servername, $username, $password, $database);
+            
            
             // Verifica la conexión
     if ($conn->connect_error) {
