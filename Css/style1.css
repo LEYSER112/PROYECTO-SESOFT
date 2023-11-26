@@ -1,0 +1,175 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+  background-color: #f7f0ee;
+}
+  /* Reduce el tamaño del carrusel */
+#carouselExample {
+    width: 80%; /* Ajusta el ancho deseado */
+    margin: 0 auto; /* Centra el carrusel en el contenedor */
+}
+
+/* Ajusta el tamaño de las imágenes del carrusel */
+#carouselExample .carousel-inner .carousel-item img {
+    max-height: 400px; /* Ajusta la altura deseada */
+    width: auto; /* Esto mantendrá la relación de aspecto */
+}
+#carousel-container {
+    margin-top: 120px; /* Ajusta el margen superior deseado */
+}
+#carousel-container1 {
+    margin-top: 30px; /* Ajusta el margen superior deseado */
+}
+
+/* Aumenta el tamaño del navbar y centra su contenido */
+.navbar {
+  height: 100px; /* Ajusta la altura deseada */
+}
+
+.navbar-brand img {
+  max-height: 100px; /* Ajusta la altura deseada del logo */
+  align-items: center;
+  margin-left: 50%;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+/* Cambia el color del texto del navbar */
+.navbar-nav .nav-link {
+  color: #0e6605 !important;
+  font-size: 17px;
+}
+.navbar-nav .nav-link:hover {
+  color: #000000 !important;
+  font-size: 17px;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.image-container img {
+    width: 300px; /* Ajusta el ancho deseado */
+    height: 200px; /* Ajusta la altura deseada */
+    object-fit: cover; /* O el ajuste que prefieras */
+    transition: transform 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 158, 41, 0);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.overlay:hover {
+  background: rgba(9, 158, 41, 0.7);
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: top 0.3s, opacity 0.3s;
+}
+
+.overlay:hover .text {
+  top: 50%;
+  opacity: 1;
+}
+
+.image-container:hover img {
+  transform: scale(1.2); /* Ajusta el valor para el nivel de zoom deseado */
+}
+
+#power-bi-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción de aspecto 16:9 (9/16 * 100%) */
+    height: 0;
+    overflow: hidden;
+}
+
+.power-bi-box {
+    margin-top: 100px;
+    border: 2px solid #ccc; /* Estilo del borde del rectángulo */
+    padding: 20px; /* Espacio interno del rectángulo */
+    width: 100%; /* Ancho del rectángulo */
+}
+
+.power-bi-box h2 {
+    font-size: 24px; /* Tamaño del título */
+}
+
+.power-bi-box p {
+    font-size: 16px; /* Tamaño de la descripción */
+}
+
+.power-bi-box iframe {
+    width: 100%; /* Ancho del iframe */
+    height: 600px; /* Altura del iframe, ajústala según tus necesidades */
+}
+
+
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.modal-content {
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.modal-content img {
+    max-width: 90%;
+    max-height: 80%;
+    border: 3px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
